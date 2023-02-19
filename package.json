@@ -1,5 +1,5 @@
 {
-  "name": "web3-unleashed-demo",
+  "name": "ethers.js-tutorial",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -22,6 +22,7 @@
     "autoprefixer": "^10.4.12",
     "eslint": "8.24.0",
     "eslint-config-next": "12.3.1",
+    "ethers": "^5.6.9",
     "postcss": "^8.4.17",
     "tailwindcss": "^3.1.8",
     "typescript": "4.8.4"
