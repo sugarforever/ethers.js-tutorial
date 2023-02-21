@@ -2,6 +2,7 @@ import Link from "next/link";
 import { useListen } from "../hooks/useListen";
 import { useMetamask } from "../hooks/useMetamask";
 import { Loading } from "./Loading";
+import { ethers } from "ethers";
 
 export default function Wallet() {
   const {
@@ -28,6 +29,10 @@ export default function Wallet() {
         method: "eth_getBalance",
         params: [accounts[0], "latest"],
       });
+
+      const provider = new ethers.providers.Web3Provider(window.ethereum);
+      const signer = provider.getSigner();
+      console.log(signer);
       dispatch({ type: "connect", wallet: accounts[0], balance });
 
       // we can register an event listener for changes to the users wallet
